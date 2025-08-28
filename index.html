@@ -230,18 +230,14 @@
             </div>
             </div>
             <div class="bg-white mt-5 md:mt-0 md:w-[300px] shadow-sm rounded-2xl">
-                <div class="flex items-center  justify-between ml-2.5 mr-2.5 mt-4">
-                    <h1 class="font-bold"><i class="fa-regular fa-clock"></i> Call History</h1>
-                    <button class="btn btn-active bg-[#00A63E] text-white rounded-[9999px] h-[52px] w-[114px]">Clear</button>
+                <div class="flex items-center justify-between ml-2.5 mr-2.5 mt-4">
+                    <h1 id="call-history-btn" class="font-bold"><i class="fa-regular fa-clock"></i> Call History</h1>
+                    <button id="clear-history-btn" class="btn btn-active bg-[#00A63E] text-white rounded-[9999px] h-[52px] w-[114px]">Clear</button>
                 </div>
-                <div class="flex justify-between items-center  mt-2 rounded-lg bg-gray-100">
-                    <div class="ml-3 mr-3">
-                        <h1 class=" font-semibold text-lg">Fire Service Number</h1>
-                        <p class="text-gray-500">999</p>
-                    </div>
-                    <p>11:36:58 AM</p>
-                </div>
+  
+                <div id="call-history-list"></div>
             </div>
+
         </div>
     </main>
 
