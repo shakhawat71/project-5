@@ -52,3 +52,27 @@ document.querySelectorAll(".call-btn").forEach(button => {
 document.querySelector("#clear-history-btn").addEventListener("click", function(){
   callHistoryElement.innerHTML = "";
 });
+
+
+// copy button
+const copyButtons = document.querySelectorAll(".copy-btn");
+const copyCount = document.getElementById("copy-count");
+
+for (const btn of copyButtons) {
+  btn.addEventListener("click", async () => {
+    const card = btn.closest(".card"); 
+    const serviceNumber = card.querySelector(".serviceNumber").innerText.trim();
+
+    await navigator.clipboard.writeText(serviceNumber);
+
+    copyCount.innerText = +copyCount.innerText + 1;
+
+    const original = btn.innerHTML;
+    btn.innerHTML = "Copied!";
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = original;
+      btn.disabled = false;
+    }, 1200);
+  });
+}
